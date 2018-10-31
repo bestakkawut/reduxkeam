@@ -1,12 +1,13 @@
-export const increment = (score = 1)=> ({
-    type:"INCREMENT",
-    score
+export const ADD_TASK =(newTask)=> ({
+    type:"ADD_TASK",
+    newTask
 })
 
-export const decrement = (score = -1)=> ({
-    type:"DECREMENT",
-    score
+export const TOGGLE_TASK = (index)=> ({
+    type:"TOGGLE_TASK",
+    index
 })
+
 
 // export default({
 //     increment

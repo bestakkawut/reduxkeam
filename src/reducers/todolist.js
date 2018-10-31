@@ -15,17 +15,26 @@ const initialState = {
 
 const todolist = ( state = initialState, action)=>{
     switch(action.type){
-        case 'ADD':
+        case 'ADD_TASK':
             return {
                 ...state,
                 todos: [...state.todos,action.newTask]
             }
             
-        case 'Complete':
-            return {
-                ...state,
-                todos: [...state.todos,action.newTask]
-            }
+        case 'TOGGLE_TASK':
+            return Object.assign({},state,{
+                todos: state.todos.map((todo,index)=>{
+                    if(index===action.index){
+                        return Object.assign({},state,{
+                            title:todo.title,
+                            description:todo.description,
+                            complete: !todo.complete
+                        })
+                    }
+                    console.log(todo)
+                    return todo
+                })
+            })
         default:
             return state
     }

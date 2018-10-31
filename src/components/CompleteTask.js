@@ -1,7 +1,8 @@
 import React,{Fragment, Component} from "react"
 import { connect } from "react-redux"
+import { TOGGLE_TASK } from "../actions"
 
-const CompleteTask = ({todolist}) => (
+const CompleteTask = ({todolist,dispatch}) => (
     <Fragment>
     <h1>Complete</h1>
     <ul>
@@ -9,7 +10,7 @@ const CompleteTask = ({todolist}) => (
             todolist.map((todo,index)=>{
                 if(todo.complete){
                     return( <li key={index} style={{textDecoration: "line-through"}}>
-                                <input type="checkbox" checked="true"/> {todo.title} 
+                                <input type="checkbox" onChange={()=>dispatch(TOGGLE_TASK(index))} defaultChecked/> {todo.title} 
                                 <p>{todo.description}</p>
                             </li> 
                     )
