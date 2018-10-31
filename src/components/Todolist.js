@@ -1,6 +1,6 @@
 import React,{Fragment, Component} from "react"
 import { connect } from 'react-redux'
-import { TOGGLE_TASK } from '../actions'
+import { TOGGLE_TASK,DELETE_TASK } from '../actions'
 
 let Todolist = ({todolist,dispatch})=>(
     <div>
@@ -10,7 +10,8 @@ let Todolist = ({todolist,dispatch})=>(
                 return(
                     <li key={index} style={{textDecoration: todo.complete ? "line-through" : "none"}}>
                         <input type="checkbox" onChange={()=>dispatch(TOGGLE_TASK(index))}/> {todo.title} 
-                        <p>{todo.description}</p>
+                        <p>{index}{todo.description}</p>
+                        <button onClick={()=>dispatch(DELETE_TASK(index))}>delete</button>
                     </li>
                 )
             }

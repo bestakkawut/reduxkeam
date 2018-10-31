@@ -12,9 +12,7 @@ export default class TaskList extends Component{
                 <ul>
                     <Todolist/>
                 </ul>
-                </div>
-
-                
+                </div>                
             </Fragment>
         );
     }
