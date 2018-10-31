@@ -34,14 +34,10 @@ import NewTask from './components/NewTask';
 // )
 
 
-const App = ({message,todolist,counters,dispatch})=>(
+const App = ({todolist,dispatch})=>(
       <Fragment>
         <div>
           <h1>Reminders</h1>
-          <h2>{counters}</h2>
-          <button  onClick={()=>dispatch({type:"INCREMENT",score:1})}>
-            add
-          </button>
         </div>
         <CompleteTask/>
         <TaskList todolist={todolist.todos}/>
@@ -52,8 +48,6 @@ const App = ({message,todolist,counters,dispatch})=>(
 
 const mapStateToProps = function(state){
   return{
-    message: 'This is message from mapStateToProps',
-    counters: state.counters || 0,
     todolist: state.todolist
   }
 }

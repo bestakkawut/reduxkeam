@@ -3,7 +3,7 @@ const initialState = {
         {
             title:"test",
             description:"first",
-            complete:false
+            complete:true
         },
         {
             title:"test2",
@@ -21,8 +21,11 @@ const todolist = ( state = initialState, action)=>{
                 todos: [...state.todos,action.newTask]
             }
             
-        case 'EDIT':
-            return state
+        case 'Complete':
+            return {
+                ...state,
+                todos: [...state.todos,action.newTask]
+            }
         default:
             return state
     }

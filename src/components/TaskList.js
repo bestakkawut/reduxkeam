@@ -10,13 +10,7 @@ export default class TaskList extends Component{
                 </div>
                 <div>
                 <ul>
-                {console.log('<tasklist>',this.props.todolist)
-                }
-                {
-                    this.props.todolist.map((todo,index)=>
-                        <Todolist key={index} title={todo.title} />
-                    )
-                }
+                    <Todolist/>
                 </ul>
                 </div>
 

@@ -1,13 +1,29 @@
 import React,{Fragment, Component} from "react"
+import { connect } from 'react-redux'
 
 
-export default class Todolist extends Component{
-    render(){
+const Todolist = ({todolist,dispatch})=>(
+    <div>
+    {
+        todolist.map((todo,index)=>{
+            if(!todo.complete){
+                return(
+                    <li key={index} style={{textDecoration: todo.complete ? "line-through" : "none"}}>
+                        <input type="checkbox"/> {todo.title} 
+                        <p>{todo.description}</p>
+                    </li>
+                )
+            }
+        })
+    }        
+    </div>
+)
 
-        return(
-            // <Fragment>
-                <li key={this.props.id} style={{textDecoration:"line-through"}}><input type="checkbox"/> {this.props.title} </li>
-            // </Fragment>
-        );
+const mapStateToProps = function(state){
+    return{
+      todolist: state.todolist.todos
     }
 }
+  
+  const TodolistWithConnect = connect(mapStateToProps)(Todolist)
+  export default TodolistWithConnect
