@@ -1,6 +1,9 @@
 {
   "name": "todolist",
   "version": "0.1.0",
+  "author": {
+    "name":"AKKAWUT YONSUK"
+  },
   "private": true,
   "dependencies": {
     "react": "^16.6.0",
