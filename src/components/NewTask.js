@@ -6,15 +6,18 @@ import { ADD_TASK } from '../actions'
 const NewTask = ({dispatch}) =>(
 
     <Fragment>
-        <div>
-            <h1>NewTask</h1>
+        <div className="wrap-task">
+            <h1 className="head-task">NewTask</h1>
         </div>
-        <div>
-            <input id="title" type="text" placeholder="Title"/>
-            <br></br>
-            <textarea id="description" placeholder="description"></textarea>
-            <button onClick={()=>dispatch(ADD_TASK(sendObj()))} >complete</button>
-            <button>cancle</button>
+        <div className="wrap-new-form">
+            <div className="wrap-new-input">
+                <input id="title" className="new-title" type="text" placeholder="Title"/>
+                <textarea id="description" className="new-desc" placeholder="Description"></textarea>
+                <div style={{textAlign:"right"}}>
+                    <button className="btn-style btn-info" onClick={()=>dispatch(ADD_TASK(sendObj()))} >complete</button>
+                    <button className="btn-style btn-cancle">cancle</button>
+                </div>
+            </div>
         </div>
     </Fragment>
 )

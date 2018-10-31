@@ -1,0 +1,96 @@
+h1,ul{
+  margin:0;
+  padding: 0;
+}
+.lineThrough,.lineThrough::placeholder{
+  text-decoration: line-through;
+}
+
+.whole{
+  position: absolute;
+  background-color: rgb(240, 240, 240);
+  top:0;
+  bottom: 0;
+}
+
+.header{
+  text-align: center;
+  font-size: 1em;
+  background-color: rgb(216, 216, 216);
+  border-bottom: 1px solid rgb(175, 175, 175);
+}
+.header > h1{
+  margin: 0;
+}
+
+.container{
+  color: #555;
+  background-color: rgb(240, 240, 240);
+}
+
+.wrap-task{
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+.head-task{
+  padding:5px 10px;
+  font-size: 1em;
+}
+.task-style{
+  list-style-type: none;
+}
+
+/* BUTTON */
+.btn-style{
+  border: 0;
+  margin: 0 0 0 5px;
+  padding: 5px 10px;
+}
+
+.list-style{
+  font-size: 0.8em;
+  padding: 5px 0 10px 0;
+  margin: 0 -15px;
+  border-bottom: 1px solid #ccc;
+}
+.list-style > input[type="checkbox"]{
+  margin: 0 5px 0 10px;
+  vertical-align: middle;
+}
+.list-input{
+  display: inline-block;
+  /* vertical-align: middle; */
+}
+.title-style{
+  font-weight: 600;
+  padding: 5px 10px 5px 5px;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  width: 80%;
+  display: inline-block;
+  background-color: transparent;
+}
+.desc-style{
+  margin: 5px 0 10px 0;
+}
+
+/* NEW TASK */
+.wrap-new-input{
+  text-align: left;
+  padding: 0 15px;
+}
+.new-title{
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  margin: 15px 0 5px 0;
+  padding: 0 5px 3px 5px;
+  box-sizing: border-box;
+}
+.new-desc,.desc-style{
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 5px;
+  box-sizing: border-box;
+}

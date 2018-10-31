@@ -1,18 +1,21 @@
 import React,{Fragment, Component} from "react"
 import Todolist from './Todolist'
+import CompleteTask from './CompleteTask'
 
 export default class TaskList extends Component{
     render(){
         return(
             <Fragment>
-                <div>
-                <h1>TaskList</h1>
+                <div className="wrap-task">
+                    <h1 className="head-task">TaskList</h1>
                 </div>
                 <div>
-                <ul>
                     <Todolist/>
-                </ul>
-                </div>                
+                </div>
+                <div>                           
+                    <CompleteTask/>                
+                </div>            
+               
             </Fragment>
         );
     }

@@ -25,12 +25,13 @@ const todolist = ( state = initialState, action)=>{
             })
 
         case 'EDIT_TASK':
+            // return console.log(action.index,action.newTask),{...state}
             return Object.assign({},state,{
                 todos:state.todos.map((todo,index)=>{
                     if(index===action.index){
-                        return Object.assion({},state,{
-                            title:action.title,
-                            description:action.description,
+                        return Object.assign({},state,{
+                            title:action.newTask.title,
+                            description:action.newTask.description,
                             complete:todo.complete
                         })
                     }

@@ -3,20 +3,10 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './reducers';
-// import { HashRouter, Route } from 'react-router'
 import './index.css';
+// import './style/reset.css'
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
-
-// const reducer = (state=0,action) =>{
-//     switch(action.type){
-//         case "INC":
-//             return state += action.payload
-//         case "DEC":
-//             return state -= 1
-//         default:
-//     }
-// }
 
 const store = createStore(rootReducer)
 
@@ -25,10 +15,6 @@ store.subscribe(()=>{
     
 })
 
-// store.dispatch({
-//     type:"INC",
-//     payload:500
-// })
 
 const MyApp = () =>(
     <Provider store={store}>
