@@ -6,9 +6,6 @@ import { ADD_TASK } from '../actions'
 const NewTask = ({dispatch}) =>(
 
     <Fragment>
-        <div className="wrap-task">
-            <h1 className="head-task">NewTask</h1>
-        </div>
         <div className="wrap-new-form">
             <div className="wrap-new-input">
                 <input id="title" className="new-title" type="text" placeholder="Title"/>
@@ -25,7 +22,10 @@ const NewTask = ({dispatch}) =>(
 function sendObj(){
     let title = document.querySelector("#title").value;
     let description = document.querySelector("#description").value;
-    let newTask = {title:title,description:description,complete:false};
+    let today = new Date();
+    let date = today.getDay()+"-"+today.getMonth()+"-"+today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes()
+    let newTask = {title:title,description:description,date:date,time:time,complete:false};
     document.querySelector("#title").value = "";
     document.querySelector("#description").value = "";
     return newTask

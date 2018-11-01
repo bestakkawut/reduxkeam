@@ -17,6 +17,8 @@ const todolist = ( state = initialState, action)=>{
                         return Object.assign({},state,{
                             title:todo.title,
                             description:todo.description,
+                            date:todo.date,
+                            time:todo.time,
                             complete: !todo.complete
                         })
                     }
@@ -32,6 +34,8 @@ const todolist = ( state = initialState, action)=>{
                         return Object.assign({},state,{
                             title:action.newTask.title,
                             description:action.newTask.description,
+                            date:todo.date,
+                            time:todo.time,
                             complete:todo.complete
                         })
                     }

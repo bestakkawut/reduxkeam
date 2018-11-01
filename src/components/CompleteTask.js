@@ -4,9 +4,6 @@ import { TOGGLE_TASK,DELETE_TASK,EDIT_TASK } from "../actions"
 
 const CompleteTask = ({todolist,dispatch}) => (
     <Fragment>
-    <div className="wrap-task">
-        <h1 className="head-task">Complete <span></span></h1>
-    </div>
     <div className="wrap-new-input">
     <ul className="task-style">
         {
@@ -15,7 +12,8 @@ const CompleteTask = ({todolist,dispatch}) => (
                     return( <li key={index} className="list-style" >
                                 <input type="checkbox" onChange={()=>dispatch(TOGGLE_TASK(index))} defaultChecked/>
                                 <span style={{fontWeight:"600"}}>{index+1}</span>
-                                <input id={"title"+index} className="title-style lineThrough" type="text" placeholder={todo.title} />             
+                                <input id={"title"+index} className="title-style lineThrough" type="text" placeholder={todo.title} />  
+                                <p className="date-style">Date : {todo.date+"  "+todo.time} </p>            
                                 <div style={{padding:"0px 20px 0 30px"}}>
                                     <textarea id={"description"+index} className="desc-style lineThrough">{todo.description}</textarea>
                                 </div>

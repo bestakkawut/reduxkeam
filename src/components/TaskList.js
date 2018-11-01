@@ -6,15 +6,9 @@ export default class TaskList extends Component{
     render(){
         return(
             <Fragment>
-                <div className="wrap-task">
-                    <h1 className="head-task">TaskList</h1>
-                </div>
                 <div>
                     <Todolist/>
-                </div>
-                <div>                           
-                    <CompleteTask/>                
-                </div>            
+                </div>      
                
             </Fragment>
         );

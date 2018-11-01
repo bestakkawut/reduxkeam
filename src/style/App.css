@@ -41,7 +41,12 @@ body{
 .task-style{
   list-style-type: none;
 }
-
+.date-style{
+  margin: 0;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  color: #918e8e;
+}
 /* BUTTON */
 .btn-style{
   border: 0;
@@ -61,7 +66,6 @@ body{
 }
 .list-input{
   display: inline-block;
-  /* vertical-align: middle; */
 }
 .title-style{
   font-weight: 600;
@@ -76,7 +80,8 @@ body{
   margin: 5px 0 10px 0;
 }
 
-/* NEW TASK */
+
+/* TASK */
 .wrap-new-input{
   text-align: left;
   padding: 0 15px;
