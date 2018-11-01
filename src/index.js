@@ -3,12 +3,11 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './reducers';
-import './index.css';
+import './style/index.css';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.css';
 import 'bootstrap'
-// import './style/reset.css'
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
 

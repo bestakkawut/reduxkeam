@@ -17,7 +17,3 @@ export const DELETE_TASK = (index)=>({
     index
 })
 
-
-// export default({
-//     increment
-// })

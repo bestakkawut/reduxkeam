@@ -34,7 +34,7 @@ const App = ({todolist,dispatch})=>(
           </div>
           <div className="row">
           <div className="col"></div>
-          <div className="col-md-10 col-lg-4">
+          <div className="col-sm-10 col-md-10 col-lg-6">
             <div className="accordion"  id="accordionExample">
 
               <div className="card">
