@@ -51,6 +51,7 @@ const App = ({todolist,dispatch})=>(
                   </div>
                 </div>
               </div>
+
               <div className="card">
                 <div className="card-header" data-toggle="collapse" data-target="#collapseComplete" aria-expanded="true" aria-controls="collapseComplete" id="headingComplete">
                   <h5 className="mb-0">
@@ -65,7 +66,7 @@ const App = ({todolist,dispatch})=>(
                     </button>
                   </h5>
                 </div>
-                <div id="headingComplete" className="collapse" aria-labelledby="headingComplete">
+                <div id="collapseComplete" className="collapse" aria-labelledby="headingComplete">
                   <div className="card-body">
                     <CompleteTask/>
                   </div>
