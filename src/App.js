@@ -35,27 +35,47 @@ const App = ({todolist,dispatch})=>(
           <div className="row">
           <div className="col"></div>
           <div className="col-sm-10 col-md-10 col-lg-6">
-            <div className="accordion"  id="accordionExample">
+            <div className="accordion">
 
               <div className="card">
-                <div className="card-header" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="headingOne">
+                <div className="card-header" data-toggle="collapse" data-target="#collapseNewTask" aria-expanded="true" aria-controls="collapseNewTask" id="headingNewtask">
                   <h5 className="mb-0">
-                    <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNewTask" aria-expanded="true" aria-controls="collapseNewTask">
                       NewTask
                     </button>
                   </h5>
                 </div>
-                <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div id="collapseNewTask" className="collapse show" aria-labelledby="headingNewtask">
                   <div className="card-body">
                   <NewTask/>
                   </div>
                 </div>
               </div>
-
               <div className="card">
-                <div className="card-header" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="headingTwo">
+                <div className="card-header" data-toggle="collapse" data-target="#collapseComplete" aria-expanded="true" aria-controls="collapseComplete" id="headingComplete">
                   <h5 className="mb-0">
-                    <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseComplete" aria-expanded="false" aria-controls="collapseComplete">
+                      CompleteTask
+                      <span className="badge badge-secondary" style={{marginLeft:"10px"}}>
+                    
+                      {  
+                        countTask(todolist,"COM")
+                      }
+                      </span>
+                    </button>
+                  </h5>
+                </div>
+                <div id="headingComplete" className="collapse" aria-labelledby="headingComplete">
+                  <div className="card-body">
+                    <CompleteTask/>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="card">
+                <div className="card-header" data-toggle="collapse" data-target="#collapseTask" aria-expanded="false" aria-controls="collapseTask" id="headingTask">
+                  <h5 className="mb-0">
+                    <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTask" aria-expanded="false" aria-controls="collapseTask">
                       TaskList
                       
                       <span className="badge badge-secondary" style={{marginLeft:"10px"}}>
@@ -67,30 +87,9 @@ const App = ({todolist,dispatch})=>(
                     </button>
                   </h5>
                 </div>
-                <div id="collapseTwo" className="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div id="collapseTask" className="collapse show" aria-labelledby="headingTask">
                   <div className="card-body">
                     <TaskList/>
-                  </div>
-                </div>
-              </div>
-
-              <div className="card">
-                <div className="card-header" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" id="headingThree">
-                  <h5 className="mb-0">
-                    <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      CompleteTask
-                      <span className="badge badge-secondary" style={{marginLeft:"10px"}}>
-                    
-                      {  
-                        countTask(todolist,"COM")
-                      }
-                      </span>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseThree" className="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
-                  <div className="card-body">
-                    <CompleteTask/>
                   </div>
                 </div>
               </div>
