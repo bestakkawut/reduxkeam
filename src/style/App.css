@@ -5,12 +5,15 @@ h1,ul{
 .lineThrough,.lineThrough::placeholder{
   text-decoration: line-through;
 }
+body{
+  background-color: rgb(240, 240, 240);
+}
 
 .whole{
-  position: absolute;
+  border-left: 1px solid rgb(224, 224, 224);
+  border-right: 1px solid rgb(224, 224, 224);
   background-color: rgb(240, 240, 240);
-  top:0;
-  bottom: 0;
+  padding: 0;
 }
 
 .header{

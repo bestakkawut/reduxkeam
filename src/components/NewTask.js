@@ -14,8 +14,8 @@ const NewTask = ({dispatch}) =>(
                 <input id="title" className="new-title" type="text" placeholder="Title"/>
                 <textarea id="description" className="new-desc" placeholder="Description"></textarea>
                 <div style={{textAlign:"right"}}>
-                    <button className="btn-style btn-info" onClick={()=>dispatch(ADD_TASK(sendObj()))} >complete</button>
-                    <button className="btn-style btn-cancle">cancle</button>
+                    <button className="btn-style btn-info" onClick={()=>dispatch(ADD_TASK(sendObj()))} >New</button>
+                    {/*<button className="btn-style btn-cancle">cancle</button>*/}
                 </div>
             </div>
         </div>

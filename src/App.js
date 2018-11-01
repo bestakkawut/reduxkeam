@@ -10,15 +10,23 @@ import NewTask from './components/NewTask';
 const App = ({todolist,dispatch})=>(
   
     <Fragment>
-      <div className="whole">
-        <div className="header">
-          <h1>Reminders</h1>
-        </div>
-        <div className="container">
-          <NewTask/>  
-          <TaskList/>          
+    <div className="">
+      <div className="">
+        <div className="" >
+          <div className="header">
+            <h1>Reminders</h1>
+          </div>
+          <div className="row">
+            <div className="col"></div>
+            <div className="col-md-8 col-lg-4">
+              <NewTask/>  
+              <TaskList/>          
+            </div>          
+            <div className="col"></div>
+          </div>
         </div>
       </div>
+    </div>
     </Fragment>
   
     )

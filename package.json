@@ -2,10 +2,11 @@
   "name": "todolist",
   "version": "0.1.0",
   "author": {
-    "name":"AKKAWUT YONSUK"
+    "name": "AKKAWUT YONSUK"
   },
   "private": true,
   "dependencies": {
+    "bootstrap": "^4.1.3",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-redux": "^5.1.0",
