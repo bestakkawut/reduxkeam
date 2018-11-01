@@ -12,7 +12,6 @@ const NewTask = ({dispatch}) =>(
                 <textarea id="description" className="new-desc" placeholder="Description"></textarea>
                 <div style={{textAlign:"right"}}>
                     <button className="btn-style btn-info" onClick={()=>dispatch(ADD_TASK(sendObj()))} >New</button>
-                    {/*<button className="btn-style btn-cancle">cancle</button>*/}
                 </div>
             </div>
         </div>
@@ -23,7 +22,7 @@ function sendObj(){
     let title = document.querySelector("#title").value;
     let description = document.querySelector("#description").value;
     let today = new Date();
-    let date = today.getDay()+"-"+today.getMonth()+"-"+today.getFullYear();
+    let date = today.getDate()+"-"+today.getMonth()+"-"+today.getFullYear();
     var time = today.getHours() + ":" + today.getMinutes()
     let newTask = {title:title,description:description,date:date,time:time,complete:false};
     document.querySelector("#title").value = "";
