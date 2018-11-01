@@ -6,7 +6,6 @@ import rootReducer from './reducers';
 import './style/index.css';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/font-awesome/css/font-awesome.css';
 import 'bootstrap'
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
